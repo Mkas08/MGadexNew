@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Paints | MGadex</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="MGadex" style="height: 50px;">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <div class="nav-close">
+                        <i class="ph ph-x"></i>
+                    </div>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="projects.html" class="nav-link active">Paints</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <i class="ph ph-list"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('assets/images/hero_bg.png');">
+        <div class="overlay"></div>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <h1 class="page-title">OUR PAINTS</h1>
+            <p class="breadcrumbs">mgadex.com / <span class="active">Our Paints</span></p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons text-center">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="emulsion">Emulsion</button>
+                <button class="filter-btn" data-filter="texcote">Texcote</button>
+                <button class="filter-btn" data-filter="satin">Satin</button>
+                <button class="filter-btn" data-filter="gloss">Gloss</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Product 1 -->
+                <div class="gallery-item emulsion reveal fade-up delay-100">
+                    <a href="product-detail.html?id=super-emulsion" class="details-link">
+                        <div class="img-wrapper">
+                            <img src="assets/images/service_roller.png" alt="MGadex Emulsion">
+                            <div class="gallery-overlay">
+                                <h3>Super Emulsion</h3>
+                                <p>High quality matte finish</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="gallery-item satin reveal fade-up delay-200">
+                    <a href="product-detail.html?id=royal-satin" class="details-link">
+                        <div class="img-wrapper">
+                            <img src="assets/images/service_brush.png" alt="MGadex Satin">
+                            <div class="gallery-overlay">
+                                <h3>Royal Satin</h3>
+                                <p>Smooth washable finish</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="gallery-item texcote reveal fade-up delay-300">
+                    <a href="product-detail.html?id=textured-cote" class="details-link">
+                        <div class="img-wrapper">
+                            <img src="assets/images/service_spray.png" alt="MGadex Texcote">
+                            <div class="gallery-overlay">
+                                <h3>Textured Cote</h3>
+                                <p>Durable exterior finish</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="gallery-item gloss reveal fade-up delay-100">
+                    <a href="product-detail.html?id=high-gloss" class="details-link">
+                        <div class="img-wrapper">
+                            <img src="assets/images/about_us.png" alt="MGadex Gloss">
+                            <div class="gallery-overlay">
+                                <h3>High Gloss</h3>
+                                <p>Shiny protective finish</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="gallery-item emulsion reveal fade-up delay-200">
+                    <a href="product-detail.html?id=standard-emulsion" class="details-link">
+                        <div class="img-wrapper">
+                            <img src="assets/images/hero_bg.png" alt="MGadex Standard">
+                            <div class="gallery-overlay">
+                                <h3>Standard Emulsion</h3>
+                                <p>Economical choice</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="gallery-item satin reveal fade-up delay-300">
+                    <a href="product-detail.html?id=silk-sheen" class="details-link">
+                        <div class="img-wrapper">
+                            <img src="assets/images/project_1.png" alt="MGadex Silk">
+                            <div class="gallery-overlay">
+                                <h3>Silk Sheen</h3>
+                                <p>Elegant slight sheen</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="MGadex" style="height: 40px; filter: brightness(0) invert(1);">
+                <p>We provide you with both natural and long lasting product value for decoration.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>MGADEX OFFICE</h4>
+                <ul class="contact-list">
+                    <li><i class="ph ph-map-pin"></i> No. 102 Dakata Industry Area, Kano State</li>
+                    <li><i class="ph ph-phone"></i> +234 809 957 7832</li>
+                    <li><i class="ph ph-envelope"></i> info@mgadex.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2025 MGadex. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Simple Filter Script
+        const buttons = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.gallery-item');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Active class
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                items.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

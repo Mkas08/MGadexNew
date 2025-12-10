@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MGadex</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="MGadex" style="height: 50px;">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <div class="nav-close">
+                        <i class="ph ph-x"></i>
+                    </div>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="projects.html" class="nav-link">Paints</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <i class="ph ph-list"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('assets/images/hero_bg.png');">
+        <div class="overlay"></div>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <h1 class="page-title">CONTACT US</h1>
+            <p class="breadcrumbs">mgadex.com / <span class="active">Contact Us</span></p>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section reveal zoom-in">
+        <div class="container">
+            <div class="map-container">
+                <!-- Embedded Google Map for Kano, Nigeria -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.879793976516!2d8.538744314816047!3d12.008415991490282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae81416acdb11b%3A0x6295550a241686c1!2sDakata%2C%20Kano!5e0!3m2!1sen!2sng!4v1670691234567!5m2!1sen!2sng"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="section contact-info reveal fade-up">
+        <div class="container contact-grid">
+            <!-- Address Card -->
+            <div class="contact-card reveal fade-left delay-100">
+                <div class="contact-icon">
+                    <i class="ph ph-map-pin"></i>
+                </div>
+                <p>No. 102 Dakata Industry Area,<br>Kano State. Nigeria</p>
+            </div>
+
+            <!-- Email/Web Card -->
+            <div class="contact-card reveal fade-right delay-200">
+                <div class="contact-icon">
+                    <i class="ph ph-envelope"></i>
+                </div>
+                <p>Email: info@mgadex.com<br>Web: www.mgadex.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="MGadex" style="height: 40px; filter: brightness(0) invert(1);">
+                <p>We provide you with both natural and long lasting product value for decoration.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>MGADEX OFFICE</h4>
+                <ul class="contact-list">
+                    <li><i class="ph ph-map-pin"></i> No. 102 Dakata Industry Area, Kano State</li>
+                    <li><i class="ph ph-phone"></i> +234 809 957 7832</li>
+                    <li><i class="ph ph-envelope"></i> info@mgadex.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2025 MGadex. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
