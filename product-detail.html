@@ -11,6 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
+
+    <!-- Open Graph (WhatsApp/Social Share) -->
+    <meta property="og:title" content="Premium Paints | MGadex">
+    <meta property="og:description"
+        content="Discover our range of high-quality paints for interior and exterior decoration.">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:url" content="https://mgadex.com">
+    <meta property="og:type" content="product">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Custom CSS -->
@@ -55,7 +63,13 @@
 
     <!-- Product Detail Section -->
     <section class="section product-details">
-        <div class="container detail-grid">
+        <!-- Loading State -->
+        <div id="loading-state" class="loading-container">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Content (Hidden Initially) -->
+        <div class="container detail-grid hidden" id="product-content">
             <!-- Left: Image -->
             <div class="detail-image">
                 <img id="product-img" src="" alt="Product Image">
@@ -65,7 +79,7 @@
             <div class="detail-info">
                 <h2 id="product-name">Loading...</h2>
                 <p class="product-category" id="product-category">Category</p>
-                <h3 class="product-price" id="product-price">₦...</h3>
+                <!-- Price removed for Inquiry Mode -->
 
                 <div class="divider-left"></div>
 
@@ -78,7 +92,7 @@
                 </ul>
 
                 <a href="#" class="btn btn-primary" id="order-btn">
-                    <i class="ph ph-whatsapp-logo"></i> ORDER NOW
+                    <i class="ph ph-whatsapp-logo"></i> INQUIRE NOW
                 </a>
             </div>
         </div>

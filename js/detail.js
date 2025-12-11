@@ -58,30 +58,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Find Product
     const product = products[productId];
 
-    if (product) {
-        // 3. Populate UI
-        document.getElementById('page-title').textContent = product.name.toUpperCase();
-        document.getElementById('breadcrumb-name').textContent = product.name;
-        document.getElementById('product-img').src = product.image;
-        document.getElementById('product-name').textContent = product.name;
-        document.getElementById('product-category').textContent = product.category;
-        document.getElementById('product-price').textContent = product.price;
-        document.getElementById('product-desc').textContent = product.desc;
+    // Simulating Network Delay for Premium Feel (500ms)
+    const delay = 500;
 
-        // Features List
-        const featureList = document.getElementById('product-features');
-        product.features.forEach(feature => {
-            const li = document.createElement('li');
-            li.innerHTML = `<i class="ph ph-check-circle"></i> ${feature}`;
-            featureList.appendChild(li);
-        });
+    setTimeout(() => {
+        const loadingContainer = document.getElementById('loading-state');
+        const contentContainer = document.getElementById('product-content');
 
-        // Whatsapp Link
-        const msg = `Hello, I am interested in buying ${product.name} priced at ${product.price}.`;
-        document.getElementById('order-btn').href = `https://wa.me/2348099577832?text=${encodeURIComponent(msg)}`;
+        if (loadingContainer) loadingContainer.classList.add('hidden');
+        if (contentContainer) contentContainer.classList.remove('hidden');
 
-    } else {
-        // Handle Not Found
-        document.querySelector('.detail-info').innerHTML = '<h2>Product Not Found</h2><p>Please return to the gallery.</p>';
-    }
+        if (product) {
+            // 3. Populate UI
+            document.getElementById('page-title').textContent = product.name.toUpperCase();
+            document.getElementById('breadcrumb-name').textContent = product.name;
+            document.getElementById('product-img').src = product.image;
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-category').textContent = product.category;
+            // Price removed
+            document.getElementById('product-desc').textContent = product.desc;
+
+            // Features List
+            const featureList = document.getElementById('product-features');
+            product.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="ph ph-check-circle"></i> ${feature}`;
+                featureList.appendChild(li);
+            });
+
+            // Whatsapp Link - Inquiry Focused
+            const msg = `Hello, I am interested in your painting services and would like to know more about ${product.name}.`;
+            document.getElementById('order-btn').href = `https://wa.me/2348099577832?text=${encodeURIComponent(msg)}`;
+
+        } else {
+            // Handle Not Found
+            if (contentContainer) contentContainer.innerHTML = '<h2>Product Not Found</h2><p>Please return to the gallery.</p>';
+        }
+    }, delay);
 });
+

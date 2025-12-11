@@ -58,11 +58,12 @@
             <div class="about-text">
                 <h2>WHO WE ARE</h2>
                 <div class="divider"></div>
-                <p>MGadex Paints has been giving quality paints and stains to property holders and experts alike for
-                    well more than 10 years. Today, MGadex Paint's line-up of very much regarded private, business and
-                    mechanical paint brands offers a wide scope of decisions.</p>
-                <p>MGadex paints is particularly situated to meet the majority of your painting needs with an expansive
-                    and profound product offering, prevalent specialized help, and individualized client benefit.</p>
+                <p style="font-size: 16px; line-height: 1.8;">For over a decade, <strong>MGadex Paints</strong> has
+                    defined excellence in the Nigerian paint industry, serving residential and commercial clients with
+                    uncompromised quality.</p>
+                <p style="font-size: 16px; line-height: 1.8;">We are not just a paint store; we are a dedicated team of
+                    coating experts. From modest homes to expansive industrial complexes, our mission remains the same:
+                    to deliver products that protect, beautify, and endure.</p>
             </div>
             <div class="about-image">
                 <!-- Using placeholder for now -->
@@ -71,36 +72,46 @@
         </div>
     </section>
 
-    <!-- What We Offer -->
-    <section class="section what-we-offer" style="background: #F9F9F9;">
-        <div class="container about-grid">
-            <div class="about-image">
-                <!-- Swapped order in HTML, handled by grid in CSS if needed, but here simple order swap -->
-                <img src="assets/images/project_1.png" alt="What We Offer" style="height: 100%; object-fit: cover;">
-            </div>
-            <div class="about-text">
-                <h2>WHAT WE OFFER</h2>
-                <div class="divider"></div>
-                <p>Most of our paints are waterborne, solvent free and have low VOC content. This means they are safe
-                    for best both the people using them and the environment around us.</p>
+    <!-- Vision Strip -->
+    <section class="vision-strip reveal fade-up">
+        <div class="container">
+            <p class="vision-text">"Our Vision is to color the future of African infrastructure with sustainable,
+                premium-grade coating solutions."</p>
+        </div>
+    </section>
 
-                <div class="offer-features">
-                    <div class="feature-item">
-                        <i class="ph ph-paint-roller"></i>
-                        <span>100% Satisfaction</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="ph ph-user-check"></i>
-                        <span>Expert Painters</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="ph ph-wrench"></i>
-                        <span>Quality Work</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="ph ph-house-line"></i>
-                        <span>Interior Design</span>
-                    </div>
+    <!-- Core Values (Replaces What We Offer) -->
+    <section class="section core-values" style="background: #F9F9F9;">
+        <div class="container">
+            <div class="text-center">
+                <span class="sub-title">Why MGadex?</span>
+                <h2>OUR CORE VALUES</h2>
+            </div>
+
+            <div class="values-grid">
+                <!-- Value 1 -->
+                <div class="value-card reveal fade-up delay-100">
+                    <i class="ph ph-shield-check"
+                        style="font-size: 48px; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3>Integrity</h3>
+                    <p style="color: #666; margin-top: 15px;">We stand behind every bucket we sell. No compromises on
+                        quality or honest pricing.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="value-card reveal fade-up delay-200">
+                    <i class="ph ph-lightbulb"
+                        style="font-size: 48px; color: var(--color-highlight); margin-bottom: 20px;"></i>
+                    <h3>Innovation</h3>
+                    <p style="color: #666; margin-top: 15px;">Continuously evolving our formulas to withstand Nigeria's
+                        unique weather conditions.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="value-card reveal fade-up delay-300">
+                    <i class="ph ph-users-three"
+                        style="font-size: 48px; color: var(--color-primary); margin-bottom: 20px;"></i>
+                    <h3>Customer First</h3>
+                    <p style="color: #666; margin-top: 15px;">Your project's success is our success. We support you from
+                        selection to application.</p>
                 </div>
             </div>
         </div>
@@ -123,21 +134,46 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="assets/images/logo.png" alt="MGadex" style="height: 40px; filter: brightness(0) invert(1);">
-                <p>We provide you with both natural and long lasting product value for decoration.</p>
+            <!-- Left: Brand -->
+            <div class="footer-col-left">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="MGadex" style="height: 40px; filter: brightness(0) invert(1);">
+                    </a>
+                    <p>MGadex Paints provides premium, long-lasting coating solutions for residential and commercial projects across Nigeria.</p>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>MGADEX OFFICE</h4>
-                <ul class="contact-list">
-                    <li><i class="ph ph-map-pin"></i> No. 102 Dakata Industry Area, Kano State</li>
-                    <li><i class="ph ph-phone"></i> +234 809 957 7832</li>
-                    <li><i class="ph ph-envelope"></i> info@mgadex.com</li>
+
+            <!-- Center: Links -->
+            <div class="footer-col-center">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Our Paints</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+
+            <!-- Right: Contact & Socials -->
+            <div class="footer-col-right">
+                <h4>Contact Us</h4>
+                <ul class="contact-list footer-contact">
+                    <li>102 Dakata Industry Area, Kano <i class="ph ph-map-pin"></i></li>
+                    <li>+234 809 957 7832 <i class="ph ph-phone"></i></li>
+                    <li>info@mgadex.com <i class="ph ph-envelope"></i></li>
+                </ul>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-twitter-logo"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p>&copy; 2025 MGadex. All Rights Reserved.</p>
+            <p>&copy; 2025 MGadex Paints Nigeria. All Rights Reserved.</p>
         </div>
     </footer>
 

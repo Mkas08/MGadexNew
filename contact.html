@@ -52,58 +52,115 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="section map-section reveal zoom-in">
+    <!-- Modern Split Contact Section -->
+    <section class="section reveal fade-up">
         <div class="container">
-            <div class="map-container">
-                <!-- Embedded Google Map for Kano, Nigeria -->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.879793976516!2d8.538744314816047!3d12.008415991490282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae81416acdb11b%3A0x6295550a241686c1!2sDakata%2C%20Kano!5e0!3m2!1sen!2sng!4v1670691234567!5m2!1sen!2sng"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-container">
+                <!-- Left: Form & Info -->
+                <div class="contact-form-wrapper">
+                    <h2 style="margin-bottom: 30px;">SEND A MESSAGE</h2>
+                    <form id="whatsapp-form" onsubmit="sendToWhatsapp(event)">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" rows="4" class="form-control" placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="ph ph-whatsapp-logo"></i> SEND VIA WHATSAPP
+                        </button>
+                    </form>
+
+                    <div style="margin-top: 50px;">
+                        <h4 style="margin-bottom: 20px;">CONTACT INFO</h4>
+                        <div class="feature-item" style="margin-bottom: 15px;">
+                            <i class="ph ph-map-pin" style="color: var(--color-primary); font-size: 24px;"></i>
+                            <span style="font-weight: 400; color: #666;">No. 102 Dakata Industry Area, Kano State</span>
+                        </div>
+                        <div class="feature-item" style="margin-bottom: 15px;">
+                            <i class="ph ph-envelope" style="color: var(--color-primary); font-size: 24px;"></i>
+                            <span style="font-weight: 400; color: #666;">info@mgadex.com</span>
+                        </div>
+
+                        <h4 style="margin-top: 30px; margin-bottom: 15px;">OPENING HOURS</h4>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></li>
+                            <li><span>Saturday</span> <span>9:00 AM - 4:00 PM</span></li>
+                            <li><span>Sunday</span> <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Map -->
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.879793976516!2d8.538744314816047!3d12.008415991490282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae81416acdb11b%3A0x6295550a241686c1!2sDakata%2C%20Kano!5e0!3m2!1sen!2sng!4v1670691234567!5m2!1sen!2sng"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Info Cards -->
-    <section class="section contact-info reveal fade-up">
-        <div class="container contact-grid">
-            <!-- Address Card -->
-            <div class="contact-card reveal fade-left delay-100">
-                <div class="contact-icon">
-                    <i class="ph ph-map-pin"></i>
-                </div>
-                <p>No. 102 Dakata Industry Area,<br>Kano State. Nigeria</p>
-            </div>
+    <script>
+        function sendToWhatsapp(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
 
-            <!-- Email/Web Card -->
-            <div class="contact-card reveal fade-right delay-200">
-                <div class="contact-icon">
-                    <i class="ph ph-envelope"></i>
-                </div>
-                <p>Email: info@mgadex.com<br>Web: www.mgadex.com</p>
-            </div>
-        </div>
-    </section>
+            const text = `Hello MGadex, my name is ${name}. %0A%0A${message}`;
+            window.open(`https://wa.me/2348099577832?text=${text}`, '_blank');
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="assets/images/logo.png" alt="MGadex" style="height: 40px; filter: brightness(0) invert(1);">
-                <p>We provide you with both natural and long lasting product value for decoration.</p>
+            <!-- Left: Brand -->
+            <div class="footer-col-left">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="MGadex"
+                            style="height: 40px; filter: brightness(0) invert(1);">
+                    </a>
+                    <p>MGadex Paints provides premium, long-lasting coating solutions for residential and commercial
+                        projects across Nigeria.</p>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>MGADEX OFFICE</h4>
-                <ul class="contact-list">
-                    <li><i class="ph ph-map-pin"></i> No. 102 Dakata Industry Area, Kano State</li>
-                    <li><i class="ph ph-phone"></i> +234 809 957 7832</li>
-                    <li><i class="ph ph-envelope"></i> info@mgadex.com</li>
+
+            <!-- Center: Links -->
+            <div class="footer-col-center">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Our Paints</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+
+            <!-- Right: Contact & Socials -->
+            <div class="footer-col-right">
+                <h4>Contact Us</h4>
+                <ul class="contact-list footer-contact">
+                    <li>102 Dakata Industry Area, Kano <i class="ph ph-map-pin"></i></li>
+                    <li>+234 809 957 7832 <i class="ph ph-phone"></i></li>
+                    <li>info@mgadex.com <i class="ph ph-envelope"></i></li>
+                </ul>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-twitter-logo"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p>&copy; 2025 MGadex. All Rights Reserved.</p>
+            <p>&copy; 2025 MGadex Paints Nigeria. All Rights Reserved.</p>
         </div>
     </footer>
 

@@ -70,6 +70,7 @@
                 <div class="gallery-item emulsion reveal fade-up delay-100">
                     <a href="product-detail.html?id=super-emulsion" class="details-link">
                         <div class="img-wrapper">
+                            <span class="badge">Best Seller</span>
                             <img src="assets/images/service_roller.png" alt="MGadex Emulsion">
                             <div class="gallery-overlay">
                                 <h3>Super Emulsion</h3>
@@ -83,6 +84,7 @@
                 <div class="gallery-item satin reveal fade-up delay-200">
                     <a href="product-detail.html?id=royal-satin" class="details-link">
                         <div class="img-wrapper">
+                            <span class="badge">Trending</span>
                             <img src="assets/images/service_brush.png" alt="MGadex Satin">
                             <div class="gallery-overlay">
                                 <h3>Royal Satin</h3>
@@ -145,50 +147,118 @@
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+
+    <!-- Unsure/Consult CTA -->
+    <section class="consult-cta reveal fade-up">
+        <div class="container text-center">
+            <h3>NOT SURE WHICH FINISH IS RIGHT?</h3>
+            <p style="margin-bottom: 30px; color: var(--text-muted);">Our experts can help you choose the perfect paint
+                for your specific surface.</p>
+            <a href="contact.html" class="btn btn-blue">Chat with an Expert <i class="ph ph-chat-circle-text"></i></a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="assets/images/logo.png" alt="MGadex" style="height: 40px; filter: brightness(0) invert(1);">
-                <p>We provide you with both natural and long lasting product value for decoration.</p>
+            <!-- Left: Brand -->
+            <div class="footer-col-left">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="MGadex"
+                            style="height: 40px; filter: brightness(0) invert(1);">
+                    </a>
+                    <p>MGadex Paints provides premium, long-lasting coating solutions for residential and commercial
+                        projects across Nigeria.</p>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>MGADEX OFFICE</h4>
-                <ul class="contact-list">
-                    <li><i class="ph ph-map-pin"></i> No. 102 Dakata Industry Area, Kano State</li>
-                    <li><i class="ph ph-phone"></i> +234 809 957 7832</li>
-                    <li><i class="ph ph-envelope"></i> info@mgadex.com</li>
+
+            <!-- Center: Links -->
+            <div class="footer-col-center">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Our Paints</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+
+            <!-- Right: Contact & Socials -->
+            <div class="footer-col-right">
+                <h4>Contact Us</h4>
+                <ul class="contact-list footer-contact">
+                    <li>102 Dakata Industry Area, Kano <i class="ph ph-map-pin"></i></li>
+                    <li>+234 809 957 7832 <i class="ph ph-phone"></i></li>
+                    <li>info@mgadex.com <i class="ph ph-envelope"></i></li>
+                </ul>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-twitter-logo"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p>&copy; 2025 MGadex. All Rights Reserved.</p>
+            <p>&copy; 2025 MGadex Paints Nigeria. All Rights Reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script>
-        // Simple Filter Script
-        const buttons = document.querySelectorAll('.filter-btn');
-        const items = document.querySelectorAll('.gallery-item');
+        // Enhanced Filter Script with Search Support
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.gallery-item');
 
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Active class
+            // Check for Search Query
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search');
+
+            if (searchQuery) {
+                const term = searchQuery.toLowerCase();
+                // Deactivate all buttons
                 buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
 
-                const filter = btn.getAttribute('data-filter');
-
+                // Filter items
                 items.forEach(item => {
-                    if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
+                    const text = item.innerText.toLowerCase();
+                    if (text.includes(term)) {
+                        item.classList.remove('hide');
+                        item.style.position = 'relative';
                     } else {
-                        item.style.display = 'none';
+                        item.classList.add('hide');
+                        item.style.position = 'absolute';
                     }
+                });
+            }
+
+            // Button Click Logic
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.classList.remove('hide');
+                            item.style.position = 'relative';
+                        } else {
+                            item.classList.add('hide');
+                            setTimeout(() => {
+                                if (item.classList.contains('hide')) {
+                                    item.style.position = 'absolute';
+                                }
+                            }, 500);
+                        }
+                    });
                 });
             });
         });

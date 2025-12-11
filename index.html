@@ -8,9 +8,16 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+    <!-- Open Graph (WhatsApp/Social Share) -->
+    <meta property="og:title" content="MGadex | Professional Painting Services">
+    <meta property="og:description"
+        content="We provide natural and long lasting products for decoration and protection.">
+    <meta property="og:image" content="assets/images/hero_bg.png">
+    <meta property="og:url" content="https://mgadex.com">
+    <meta property="og:type" content="website">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Custom CSS -->
@@ -88,28 +95,77 @@
     </section>
 
     <!-- Featured Services -->
+    <!-- Popular Paints (Replaced Services) -->
     <section class="section services reveal fade-up">
         <div class="container">
             <div class="text-center">
-                <span class="sub-title">Application Area</span>
-                <h2>OUR FEATURED SERVICES</h2>
+                <span class="sub-title">Best Sellers</span>
+                <h2>OUR POPULAR PAINTS</h2>
             </div>
             <div class="services-grid">
+                <!-- Product 1 -->
                 <div class="service-card reveal fade-up delay-100">
-                    <img src="assets/images/service_roller.png" alt="Rollers" class="service-img"
-                        style="height: 64px; margin-bottom: 20px;">
-                    <h3>Rollers</h3>
+                    <img src="assets/images/service_roller.png" alt="Super Emulsion" class="service-img"
+                        style="height: 100px; margin-bottom: 20px; object-fit: contain;">
+                    <h3>Super Emulsion</h3>
+                    <p style="margin: 10px 0; color: #666; font-size: 14px;">Premium water-based paint for smooth matte
+                        finish.</p>
+                    <a href="product-detail.html?id=super-emulsion" class="btn-text">View Details <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
+                <!-- Product 2 -->
                 <div class="service-card reveal fade-up delay-200">
-                    <img src="assets/images/service_brush.png" alt="Brush" class="service-img"
-                        style="height: 64px; margin-bottom: 20px;">
-                    <h3>Brush</h3>
+                    <img src="assets/images/service_brush.png" alt="Royal Satin" class="service-img"
+                        style="height: 100px; margin-bottom: 20px; object-fit: contain;">
+                    <h3>Royal Satin</h3>
+                    <p style="margin: 10px 0; color: #666; font-size: 14px;">Luxurious, silky finish that is tough and
+                        washable.</p>
+                    <a href="product-detail.html?id=royal-satin" class="btn-text">View Details <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
+                <!-- Product 3 -->
                 <div class="service-card reveal fade-up delay-300">
-                    <img src="assets/images/service_spray.png" alt="Sprays" class="service-img"
-                        style="height: 64px; margin-bottom: 20px;">
-                    <h3>Sprays</h3>
+                    <img src="assets/images/service_spray.png" alt="Textured Cote" class="service-img"
+                        style="height: 100px; margin-bottom: 20px; object-fit: contain;">
+                    <h3>Textured Cote</h3>
+                    <p style="margin: 10px 0; color: #666; font-size: 14px;">Decorative finish for exterior protection.
+                    </p>
+                    <a href="product-detail.html?id=textured-cote" class="btn-text">View Details <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Stats Strip -->
+    <section class="section stats-strip reveal zoom-in"
+        style="background: var(--color-primary); color: white; padding: 60px 0;">
+        <div class="container stats-grid">
+            <div class="stat-item text-center">
+                <i class="ph ph-trophy"
+                    style="font-size: 48px; color: var(--color-highlight); margin-bottom: 10px;"></i>
+                <h3 style="font-size: 36px; margin: 0; color: white;">10+</h3>
+                <p style="text-transform: uppercase; font-size: 12px; letter-spacing: 1px; opacity: 0.8;">Years
+                    Experience</p>
+            </div>
+            <div class="stat-item text-center">
+                <i class="ph ph-paint-brush-broad"
+                    style="font-size: 48px; color: var(--color-highlight); margin-bottom: 10px;"></i>
+                <h3 style="font-size: 36px; margin: 0; color: white;">500+</h3>
+                <p style="text-transform: uppercase; font-size: 12px; letter-spacing: 1px; opacity: 0.8;">Projects Done
+                </p>
+            </div>
+            <div class="stat-item text-center">
+                <i class="ph ph-users" style="font-size: 48px; color: var(--color-highlight); margin-bottom: 10px;"></i>
+                <h3 style="font-size: 36px; margin: 0; color: white;">100%</h3>
+                <p style="text-transform: uppercase; font-size: 12px; letter-spacing: 1px; opacity: 0.8;">Client
+                    Satisfaction</p>
+            </div>
+            <div class="stat-item text-center">
+                <i class="ph ph-truck" style="font-size: 48px; color: var(--color-highlight); margin-bottom: 10px;"></i>
+                <h3 style="font-size: 36px; margin: 0; color: white;">24/7</h3>
+                <p style="text-transform: uppercase; font-size: 12px; letter-spacing: 1px; opacity: 0.8;">Fast Delivery
+                </p>
             </div>
         </div>
     </section>
@@ -147,24 +203,108 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="section" style="background: #f5f7fa;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <span class="sub-title">What People Say</span>
+                <h2>HEAR FROM OUR CLIENTS</h2>
+            </div>
+
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <!-- Review 1 -->
+                <div class="testimonial-card reveal fade-up">
+                    <p class="testimonial-text">"I used MGadex Satin for my hotel project in Abuja. The finish is
+                        incredible, and it wipes clean easily. Highly recommended for commercial use."</p>
+                    <div class="testimonial-author">
+                        <div
+                            style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">
+                            AJ</div>
+                        <div>
+                            <div>Alhaji Jibril</div>
+                            <small style="color: #999; font-weight: 400;">Abuja, FCT</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card reveal fade-up delay-100">
+                    <p class="testimonial-text">"The Texcote paint is very durable. We painted our fence 2 years ago and
+                        it still looks fresh despite the rainy season. Good value for money."</p>
+                    <div class="testimonial-author">
+                        <div
+                            style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">
+                            CO</div>
+                        <div>
+                            <div>Chidinma Okoye</div>
+                            <small style="color: #999; font-weight: 400;">Lekki, Lagos</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card reveal fade-up delay-200">
+                    <p class="testimonial-text">"Fast delivery to Kano! The Super Emulsion covers the wall perfectly
+                        with just two coats. My wife loves the color."</p>
+                    <div class="testimonial-author">
+                        <div
+                            style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">
+                            YM</div>
+                        <div>
+                            <div>Yusuf Mohammed</div>
+                            <small style="color: #999; font-weight: 400;">Nassarawa, Kano</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="assets/images/logo_placeholder_white.png" alt="MGadex" style="height: 40px;">
-                <p>We provide you with both natural and long lasting product value for decoration.</p>
+            <!-- Left: Brand -->
+            <div class="footer-col-left">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="MGadex"
+                            style="height: 40px; filter: brightness(0) invert(1);">
+                    </a>
+                    <p>MGadex Paints provides premium, long-lasting coating solutions for residential and commercial
+                        projects across Nigeria.</p>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>MGADEX OFFICE</h4>
-                <ul class="contact-list">
-                    <li><i class="ph ph-map-pin"></i> No. 102 Dakata Industry Area, Kano State</li>
-                    <li><i class="ph ph-phone"></i> +234 809 957 7832</li>
-                    <li><i class="ph ph-envelope"></i> info@mgadex.com</li>
+
+            <!-- Center: Links -->
+            <div class="footer-col-center">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Our Paints</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+
+            <!-- Right: Contact & Socials -->
+            <div class="footer-col-right">
+                <h4>Contact Us</h4>
+                <ul class="contact-list footer-contact">
+                    <li>102 Dakata Industry Area, Kano <i class="ph ph-map-pin"></i></li>
+                    <li>+234 809 957 7832 <i class="ph ph-phone"></i></li>
+                    <li>info@mgadex.com <i class="ph ph-envelope"></i></li>
+                </ul>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" class="social-icon"><i class="ph ph-twitter-logo"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p>&copy; 2025 MGadex. All Rights Reserved.</p>
+            <p>&copy; 2025 MGadex Paints Nigeria. All Rights Reserved.</p>
         </div>
     </footer>
 
